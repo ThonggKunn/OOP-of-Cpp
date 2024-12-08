@@ -72,9 +72,15 @@ int main() {
     for (int i = 1; i < n; i++) {
         double Acreage = square[i].calculateAcreage();
         if (Acreage > biggestAcreage) {
-            
+            biggestAcreage = Acreage;
+            biggest = i;
         }
     }
+    cout << "\nThe biggest square:\n";
+    cout << "Locate: " << biggest << endl;
+    square[biggest].Output();
+
+    return 0;
     
 }
 
